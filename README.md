@@ -26,4 +26,17 @@ int turn(double i)//return different value as angle according to the button   �
     return 0;  
   }  
 }
+```  
+### Attention  
+Due to my servo can only turn between 0° and 180°, I have to add a judgement section, which would assign pos to 0 when pos is lower than 0 and assign it to 180 when it's higher.JUst like below.  
+``` C++
+if(pos < 0)
+    {
+      pos = 0;
+    }
+    else if(pos > 180)
+    {
+      pos = 180;
+    }//logical judge.limit pos's value between 0 and 180   逻辑判断。将pos的值限定在0到180
 ```
+### Live Demonstration
